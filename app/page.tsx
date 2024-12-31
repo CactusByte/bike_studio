@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 
 const products = [
   {
@@ -36,14 +36,25 @@ const products = [
   }
 ]
 
-const brands = ['Brand A', 'Brand B', 'Brand C', 'Brand D']
+const brands = [
+  { name: 'Brand A', logo: '/placeholder.svg?height=100&width=200' },
+  { name: 'Brand B', logo: '/placeholder.svg?height=100&width=200' },
+  { name: 'Brand C', logo: '/placeholder.svg?height=100&width=200' },
+  { name: 'Brand D', logo: '/placeholder.svg?height=100&width=200' }
+]
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-100">
-      <section className="bg-blue-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+      <section className="relative h-[500px]">
+        <Image
+          src="/placeholder.svg?height=500&width=1920"
+          alt="Bike shop hero image"
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="text-center text-white">
             <h1 className="text-4xl font-bold mb-4">Welcome to Our Bike Shop</h1>
             <p className="text-xl mb-8">Discover the joy of cycling with our premium bikes and accessories</p>
             <div className="space-x-4">
@@ -63,7 +74,7 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold mb-8 text-center">Discover Our Products</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-auto">
             {products.map((product) => (
-              <Card key={product.name} className={`overflow-hidden transition-transform hover:scale-[1.02] ${
+              <Card key={product.name} className={`overflow-hidden ${
                 product.size === 'full' ? 'md:col-span-2' : ''
               }`}>
                 <div className="relative">
@@ -87,13 +98,17 @@ export default function HomePage() {
 
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-8 text-center">Our Brands</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {brands.map((brand) => (
-              <Card key={brand}>
-                <CardContent className="p-4 flex items-center justify-center h-24">
-                  <CardTitle>{brand}</CardTitle>
-                </CardContent>
-              </Card>
+              <div key={brand.name} className="flex items-center justify-center">
+                <Image
+                  src={brand.logo}
+                  alt={brand.name}
+                  width={200}
+                  height={100}
+                  className="max-w-full h-auto"
+                />
+              </div>
             ))}
           </div>
         </section>

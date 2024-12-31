@@ -9,7 +9,7 @@ export function Navbar() {
           <div className="flex">
             <Link href="/" className="flex-shrink-0 flex items-center">
               <Bike className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-bold text-gray-800">Bike Shop</span>
+              <span className="ml-2 text-xl font-bold text-gray-800">The Bike Studio</span>
             </Link>
           </div>
           <div className="flex items-center">
