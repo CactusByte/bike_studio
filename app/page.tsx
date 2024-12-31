@@ -45,23 +45,31 @@ const brands = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-black">
       <section className="relative h-[500px]">
         <Image
-          src="/placeholder.svg?height=500&width=1920"
+          src="/banner.jpg"
           alt="Bike shop hero image"
           fill
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-4xl font-bold mb-4">Welcome to Our Bike Shop</h1>
+            <h1 className="text-6xl font-bold mb-4">Welcome to The Bike Studio</h1>
             <p className="text-xl mb-8">Discover the joy of cycling with our premium bikes and accessories</p>
             <div className="space-x-4">
-              <Button asChild variant="secondary">
+            <Button 
+                asChild 
+                variant="secondary" 
+                className="w-full sm:w-auto mb-2 sm:mb-0 bg-white text-black hover:bg-amber-800 hover:text-white transition-colors duration-300"
+              >
                 <Link href="/contact">Contact Us</Link>
               </Button>
-              <Button asChild variant="secondary">
+              <Button 
+                asChild 
+                variant="secondary" 
+                className="w-full sm:w-auto bg-white text-black hover:bg-amber-800 hover:text-white transition-colors duration-300"
+              >
                 <Link href="/service">Book a Service</Link>
               </Button>
             </div>
@@ -71,7 +79,7 @@ export default function HomePage() {
 
       <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center">Discover Our Products</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center text-white">Discover Our Products</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-auto">
             {products.map((product) => (
               <Card key={product.name} className={`overflow-hidden ${
