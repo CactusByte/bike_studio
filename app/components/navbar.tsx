@@ -1,29 +1,38 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { Bike, Menu, X } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { useState } from "react";
+import Link from "next/link";
+import { Bike, Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen)
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   const NavItems = () => (
     <>
-      <Link href="/" className="text-white hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">
+      <Link
+        href="/"
+        className="text-white hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium"
+      >
         Home
       </Link>
-      <Link href="/service" className="text-white hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">
+      <Link
+        href="/service"
+        className="text-white hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium"
+      >
         Service
       </Link>
-      <Link href="/contact" className="text-white hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium">
+      <Link
+        href="/contact"
+        className="text-white hover:text-amber-800 px-3 py-2 rounded-md text-sm font-medium"
+      >
         Contact
       </Link>
     </>
-  )
+  );
 
   return (
     <nav className="bg-black shadow-md">
@@ -32,7 +41,9 @@ export function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
               {/* <Bike className="h-8 w-8 text-amber-800" /> */}
-              <span className="ml-2 text-xl font-bold text-white">The Bike <span className='text-amber-800'>Studio</span></span>
+              <span className="ml-2 text-xl font-bold text-white">
+                The Bike <span className="text-amber-800">Studio</span>
+              </span>
             </Link>
           </div>
           <div className="hidden md:flex items-center">
@@ -42,10 +53,20 @@ export function Navbar() {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon" onClick={toggleMenu}>
-                  {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6 text-white" />}
+                  {isOpen ? (
+                    <X className="h-6 w-6 text-white" />
+                  ) : (
+                    <Menu className="h-6 w-6 text-white" />
+                  )}
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[240px] sm:w-[300px] bg-black">
+              <SheetContent
+                side="right"
+                className="w-[240px] sm:w-[300px] bg-black"
+              >
+                <SheetHeader>
+                  <SheetTitle className="text-white">Menu</SheetTitle>
+                </SheetHeader>
                 <nav className="flex flex-col space-y-4 mt-4">
                   <NavItems />
                 </nav>
@@ -55,6 +76,5 @@ export function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
-
