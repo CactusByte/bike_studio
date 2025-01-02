@@ -45,7 +45,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-4">
+            <h1 className="text-4xl font-bold mb-4">
               Welcome to <span className="text-gray-300">The Bike Studio</span>
             </h1>
             <p className="text-xl mb-8">
