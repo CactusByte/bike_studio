@@ -56,6 +56,7 @@ export default function ServicePage() {
         throw new Error(data.error)
       }
     } catch (error) {
+      console.error("Verification error:", error);
       toast({
         title: "Error",
         description: "Failed to send verification code. Please try again.",
@@ -83,6 +84,7 @@ export default function ServicePage() {
         throw new Error('Invalid verification code')
       }
     } catch (error) {
+      console.error("Verification error:", error);
       toast({
         title: "Error",
         description: "Failed to verify code. Please try again.",
@@ -109,7 +111,7 @@ export default function ServicePage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          to: '+1234567890', // Replace with the specific phone number
+          to: '+17873088254', // Replace with the specific phone number
           body: `New service booking:
 Name: ${formData.name}
 Email: ${formData.email}
@@ -128,6 +130,7 @@ Address: ${formData.address}`
         throw new Error(data.error)
       }
     } catch (error) {
+      console.error("Verification error:", error);
       toast({
         title: "Error",
         description: "Failed to book service. Please try again.",
