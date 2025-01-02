@@ -9,9 +9,9 @@ export function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link href="/" className="hover:text-blue-400">Home</Link></li>
-              <li><Link href="/service" className="hover:text-blue-400">Service</Link></li>
-              <li><Link href="/contact" className="hover:text-blue-400">Contact</Link></li>
+              <li><Link href="/" className="hover:text-amber-800">Home</Link></li>
+              <li><Link href="/service" className="hover:text-amber-800">Service</Link></li>
+              <li><Link href="/contact" className="hover:text-amber-800">Contact</Link></li>
             </ul>
           </div>
           <div>
@@ -30,8 +30,8 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-700 text-center">
-          <p>&copy; {new Date().getFullYear()}The Bike Studio. All rights reserved.</p>
+        <div className="mt-8 pt-8 border-t border-amber-800 text-center">
+          <p>&copy; {new Date().getFullYear()} The Bike Studio. All rights reserved.</p>
         </div>
       </div>
     </footer>

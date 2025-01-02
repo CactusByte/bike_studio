@@ -5,53 +5,26 @@ import { Button } from "@/components/ui/button";
 const products = [
   {
     name: "Mountain Bikes",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Ut euismod purus non imperdiet congue. 
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-    Integer quis odio nisi. Vestibulum finibus arcu vitae enim porttitor, vel lacinia urna vestibulum. 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Mauris ut sollicitudin eros. Sed elementum nibh aliquam nunc sagittis, a suscipit leo varius. 
-    Donec at rutrum dolor. Mauris lectus purus, congue sit amet sollicitudin quis, maximus a tellus. 
-    Nam dictum suscipit urna.`,
+    description: `Conquista cualquier sendero con nuestras Mountain Bikes, diseñadas para ofrecer resistencia, durabilidad y un rendimiento excepcional en terrenos difíciles. Estas bicicletas están equipadas con amortiguadores de alta calidad, neumáticos robustos y un diseño ergonómico que asegura máxima comodidad y control en cada aventura. Perfectas para ciclistas apasionados que buscan adrenalina en la montaña.`,
     image: "/bmc-mtb.jpeg?height=600&width=600",
   },
   {
     name: "Road Bikes",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Ut euismod purus non imperdiet congue. 
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-    Integer quis odio nisi. Vestibulum finibus arcu vitae enim porttitor, vel lacinia urna vestibulum. 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Mauris ut sollicitudin eros. Sed elementum nibh aliquam nunc sagittis, a suscipit leo varius. 
-    Donec at rutrum dolor. Mauris lectus purus, congue sit amet sollicitudin quis, maximus a tellus. 
-    Nam dictum suscipit urna.`,
+    description: `Experimenta la velocidad y el rendimiento con nuestras Road Bikes, ideales para carreteras y largas distancias. Construidas con materiales ligeros y aerodinámicos, estas bicicletas te ofrecen una conducción fluida y eficiente. Ya sea para entrenamientos intensivos o paseos relajados, nuestras bicicletas son tu compañera perfecta para superar tus metas.`,
     image: "/road.jpeg?height=600&width=600",
   },
   {
     name: "Premium Bike Helmets",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Ut euismod purus non imperdiet congue. 
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-    Integer quis odio nisi. Vestibulum finibus arcu vitae enim porttitor, vel lacinia urna vestibulum. 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Mauris ut sollicitudin eros. Sed elementum nibh aliquam nunc sagittis, a suscipit leo varius. 
-    Donec at rutrum dolor. Mauris lectus purus, congue sit amet sollicitudin quis, maximus a tellus. 
-    Nam dictum suscipit urna.`,
+    description: `Protección y estilo que se combinan en nuestros cascos. Fabricados con materiales de alta calidad y tecnología avanzada, estos cascos ofrecen la máxima seguridad sin comprometer el confort. Con diseños modernos y ventilación optimizada, son ideales para ciclistas que priorizan su seguridad en cada ruta.`,
     image: "/helmets.jpeg?height=600&width=600",
   },
   {
     name: "Professional Bike Accessories",
-    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Ut euismod purus non imperdiet congue. 
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
-    Integer quis odio nisi. Vestibulum finibus arcu vitae enim porttitor, vel lacinia urna vestibulum. 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-    Mauris ut sollicitudin eros. Sed elementum nibh aliquam nunc sagittis, a suscipit leo varius. 
-    Donec at rutrum dolor. Mauris lectus purus, congue sit amet sollicitudin quis, maximus a tellus. 
-    Nam dictum suscipit urna.`,
+    description: `Lleva tu experiencia de ciclismo al siguiente nivel con nuestros accesorios profesionales. Desde dispositivos de seguimiento GPS hasta herramientas de mantenimiento, nuestra colección incluye todo lo que necesitas para mejorar tu rendimiento y comodidad. Diseñados para ciclistas exigentes, estos accesorios combinan innovación y funcionalidad.`,
     image: "/garmin.jpeg?height=600&width=600",
   },
 ];
+
 
 const brands = [
   { name: "BMC", logo: "/bmc.png?height=100&width=200" },
@@ -102,9 +75,9 @@ export default function HomePage() {
       </section>
 
       <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-        <section className="mb-16">
+        <section className="mb-16 ">
           {/* <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-white">Discover Our Products</h2> */}
-          <div className="space-y-12 sm:space-y-16">
+          <div className="space-y-12 sm:space-y-16 ">
             {products.map((product, index) => (
               <div
                 key={product.name}
@@ -123,7 +96,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="w-full sm:w-1/2 space-y-4 text-white">
-                  <h3 className="text-xl sm:text-2xl font-semibold">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-8 pb-8 border-b border-amber-800">
                     {product.name}
                   </h3>
                   <p className="text-gray-400 leading-relaxed">
@@ -135,9 +108,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mb-16">
+        <section className="mb-16 ">
           {/* <h2 className="text-3xl font-bold mb-8 text-center text-white">Our Brands</h2> */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 ">
             {brands.map((brand) => (
               <div
                 key={brand.name}
