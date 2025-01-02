@@ -137,7 +137,7 @@ Address: ${formData.address}`
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-black py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
       <Card className="max-w-lg mx-auto">
         <CardHeader>
           <CardTitle className="text-2xl sm:text-3xl">Bike Service Booking</CardTitle>

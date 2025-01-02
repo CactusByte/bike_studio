@@ -5,44 +5,60 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const products = [
   {
+    name: "Mountain Bikes",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Ut euismod purus non imperdiet congue. 
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+    Integer quis odio nisi. Vestibulum finibus arcu vitae enim porttitor, vel lacinia urna vestibulum. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Mauris ut sollicitudin eros. Sed elementum nibh aliquam nunc sagittis, a suscipit leo varius. 
+    Donec at rutrum dolor. Mauris lectus purus, congue sit amet sollicitudin quis, maximus a tellus. 
+    Nam dictum suscipit urna.`,
+    image: "/bmc-mtb.jpeg?height=600&width=600",
+  },
+  {
+    name: "Road Bikes",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Ut euismod purus non imperdiet congue. 
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+    Integer quis odio nisi. Vestibulum finibus arcu vitae enim porttitor, vel lacinia urna vestibulum. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Mauris ut sollicitudin eros. Sed elementum nibh aliquam nunc sagittis, a suscipit leo varius. 
+    Donec at rutrum dolor. Mauris lectus purus, congue sit amet sollicitudin quis, maximus a tellus. 
+    Nam dictum suscipit urna.`,
+    image: "/road.jpeg?height=600&width=600",
+  },
+  {
     name: "Premium Bike Helmets",
-    description: "Safety meets style with our collection of premium helmets",
-    image: "/placeholder.svg?height=300&width=400",
-    size: "half",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Ut euismod purus non imperdiet congue. 
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+    Integer quis odio nisi. Vestibulum finibus arcu vitae enim porttitor, vel lacinia urna vestibulum. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Mauris ut sollicitudin eros. Sed elementum nibh aliquam nunc sagittis, a suscipit leo varius. 
+    Donec at rutrum dolor. Mauris lectus purus, congue sit amet sollicitudin quis, maximus a tellus. 
+    Nam dictum suscipit urna.`,
+    image: "/helmets.jpeg?height=600&width=600",
   },
   {
-    name: "Shop Online, Visit In-Store",
-    description: "Choose convenience or hands-on experience - we support both!",
-    image: "/placeholder.svg?height=300&width=400",
-    size: "half",
-  },
-  {
-    name: "Professional Bike Gear",
-    description:
-      "From casual riders to professionals, we have gear for every cyclist",
-    image: "/placeholder.svg?height=400&width=800",
-    size: "full",
-  },
-  {
-    name: "Virtual Bike Fitting",
-    description:
-      "Get the perfect fit from home with our virtual fitting service",
-    image: "/placeholder.svg?height=300&width=400",
-    size: "half",
-  },
-  {
-    name: "Expert Maintenance",
-    description: "Professional maintenance services by certified technicians",
-    image: "/placeholder.svg?height=300&width=400",
-    size: "half",
+    name: "Professional Bike Accessories",
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Ut euismod purus non imperdiet congue. 
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; 
+    Integer quis odio nisi. Vestibulum finibus arcu vitae enim porttitor, vel lacinia urna vestibulum. 
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+    Mauris ut sollicitudin eros. Sed elementum nibh aliquam nunc sagittis, a suscipit leo varius. 
+    Donec at rutrum dolor. Mauris lectus purus, congue sit amet sollicitudin quis, maximus a tellus. 
+    Nam dictum suscipit urna.`,
+    image: "/garmin.jpeg?height=600&width=600",
   },
 ];
 
 const brands = [
-  { name: "Brand A", logo: "/placeholder.svg?height=100&width=200" },
-  { name: "Brand B", logo: "/placeholder.svg?height=100&width=200" },
-  { name: "Brand C", logo: "/placeholder.svg?height=100&width=200" },
-  { name: "Brand D", logo: "/placeholder.svg?height=100&width=200" },
+  { name: "BMC", logo: "/bmc.png?height=100&width=200" },
+  { name: "Cube", logo: "/cube.png?height=100&width=200" },
+  { name: "Corratec", logo: "/corratec.png?height=100&width=200" },
+  { name: "Felt", logo: "/felt.png?height=100&width=200" },
 ];
 
 export default function HomePage() {
@@ -58,10 +74,13 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
           <div className="text-center text-white">
             <h1 className="text-5xl font-bold mb-4">
-              Welcome to The Bike Studio
+              Welcome to <span className="text-gray-300">The Bike Studio</span>
             </h1>
             <p className="text-xl mb-8">
-              Discover the joy of cycling with our premium bikes and accessories
+              The Bike Studio, ofrecemos lo mejor en ciclismo. Distribuidores
+              oficiales de BMC, Felt, CUBE y Corratec, entre otras marcas
+              líderes.<br></br> Equipamos a ciclistas con tecnología y estilo en cada
+              rodada. <br></br>¡Visítanos en Mayagüez!
             </p>
             <div className="space-x-4">
               <Button
@@ -85,42 +104,40 @@ export default function HomePage() {
 
       <main className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center text-white">
-            Discover Our Products
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 auto-rows-auto">
-            {products.map((product) => (
-              <Card
+          {/* <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-white">Discover Our Products</h2> */}
+          <div className="space-y-12 sm:space-y-16">
+            {products.map((product, index) => (
+              <div
                 key={product.name}
-                className={`overflow-hidden ${
-                  product.size === "full" ? "md:col-span-2" : ""
-                }`}
+                className={`flex flex-col ${
+                  index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
+                } gap-8 items-center`}
               >
-                <div className="relative">
-                  <Image
-                    src={product.image}
-                    alt={product.name}
-                    width={product.size === "full" ? 800 : 400}
-                    height={300}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                    <h3 className="text-xl font-semibold mb-2">
-                      {product.name}
-                    </h3>
-                    <p className="text-sm text-gray-200">
-                      {product.description}
-                    </p>
+                <div className="w-full sm:w-1/2">
+                  <div className="relative aspect-square">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      className="object-cover rounded-lg"
+                    />
                   </div>
                 </div>
-              </Card>
+                <div className="w-full sm:w-1/2 space-y-4 text-white">
+                  <h3 className="text-xl sm:text-2xl font-semibold">
+                    {product.name}
+                  </h3>
+                  <p className="text-gray-400 leading-relaxed">
+                    {product.description}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-8 text-center text-white">Our Brands</h2>
+          {/* <h2 className="text-3xl font-bold mb-8 text-center text-white">Our Brands</h2> */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {brands.map((brand) => (
               <div

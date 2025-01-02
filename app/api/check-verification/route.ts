@@ -13,7 +13,7 @@ export async function POST(request: Request) {
   try {
     const verificationCheck = await client.verify.v2
       .services(verifyServiceSid!)
-      .verificationChecks.create({ to: phoneNumber, code })
+      .verificationChecks.create({ to: `+1${phoneNumber}`, code })
 
     return NextResponse.json({ success: true, status: verificationCheck.status })
   } catch (error) {

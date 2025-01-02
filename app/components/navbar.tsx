@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Bike, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -40,10 +41,13 @@ export function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              {/* <Bike className="h-8 w-8 text-amber-800" /> */}
-              <span className="ml-2 text-xl font-bold text-white">
-                The Bike <span className="text-amber-800">Studio</span>
-              </span>
+              <Image
+                  src="/logo.png"
+                  alt="Bike Shop Logo"
+                  width={238}
+                  height={73}
+                  className="h-8 w-auto sm:h-10 md:h-12"
+                />
             </Link>
           </div>
           <div className="hidden md:flex items-center">
