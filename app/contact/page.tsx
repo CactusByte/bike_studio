@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { MapPin, Phone, Mail } from 'lucide-react'
+import { MapPin, Phone } from 'lucide-react'
 
 export default function ContactPage() {
   return (
